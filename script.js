@@ -5,7 +5,7 @@
 
 'use strict';
 
-/* ── THEME TOGGLE ─────────────────────────────────────── */
+/* ── THEME TOGGLE B/W ─────────────────────────────────────── */
 const html = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 
@@ -20,7 +20,7 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('muafi-theme', next);
 });
 
-/* ── NAVBAR SCROLL STATE ─────────────────────────────── */
+/* ── NAVBAR SCROLL STATE BIAR GAK TURUN ─────────────────────────────── */
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
@@ -64,7 +64,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-/* ── LAZY IMAGE LOAD ─────────────────────────────────── */
+/* ── LAZY IMAGE LOAD BUAT ZOOM IN ─────────────────────────────────── */
 // Add a subtle reveal shimmer as images load
 document.querySelectorAll('img').forEach(img => {
   img.style.opacity = '0';
