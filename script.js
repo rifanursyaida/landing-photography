@@ -108,3 +108,31 @@ if (galleryScroller) {
     galleryScroller.scrollLeft = scrollLeft + walk;
   });
 }
+
+/* ── SKILLS: reveal + progress animation (IntersectionObserver) ───────────────── */
+(function(){
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const skillCards = document.querySelectorAll('.skill-card');
+  if (!skillCards || skillCards.length === 0 || prefersReduced) return;
+
+  const skillsObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const index = Array.from(skillCards).indexOf(el) || 0;
+      // stagger reveal
+      setTimeout(() => {
+        el.classList.add('visible');
+        const fill = el.querySelector('.skill-bar-fill');
+        if (fill) {
+          const target = parseInt(fill.getAttribute('data-target') || '0', 10);
+          // animate fill
+          requestAnimationFrame(() => { fill.style.width = target + '%'; });
+        }
+      }, index * 120);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.2 });
+
+  skillCards.forEach(c => skillsObserver.observe(c));
+})();
