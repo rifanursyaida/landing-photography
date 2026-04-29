@@ -583,20 +583,6 @@ strong { font-weight: 500; }
   line-height: 1.8;
 }
 
-.mission-images {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 32px;
-  max-width: 420px;
-}
-
-.mission-img {
-  aspect-ratio: 16/10;
-  overflow: hidden;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
 
 .mission-img:hover img { transform: scale(1.04); }
 
