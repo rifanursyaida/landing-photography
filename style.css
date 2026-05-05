@@ -436,7 +436,7 @@ strong { font-weight: 500; }
 }
 
 .about-portrait-wrap {
-  aspect-ratio: 2/3;
+  aspect-ratio: 3/2;
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
