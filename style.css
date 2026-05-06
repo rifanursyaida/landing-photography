@@ -276,8 +276,10 @@ strong { font-weight: 500; }
 
 .hero-img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .hero-img-caption {
@@ -411,7 +413,7 @@ strong { font-weight: 500; }
 /* ── SHOWCASE ROW ───────────────────────────────────────── */
 .showcase {
   background: var(--bg);
-  padding: 12px 0;
+  padding: 24px 0;
 }
 
 .showcase-grid {
@@ -421,7 +423,7 @@ strong { font-weight: 500; }
 }
 
 .showcase-item {
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/10; parent of 73c8ad6 (initial commit: ubah foto sama style)
   overflow: hidden;
 }
 
@@ -579,21 +581,6 @@ strong { font-weight: 500; }
   font-size: .9rem;
   color: var(--fg-muted);
   line-height: 1.8;
-}
-
-.mission-images {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding-top: 64px
-  max-width: 420px
-}
-
-.mission-img {
-  aspect-ratio: 5/4;
-  overflow: hidden;
-  border-radius var(--radius);
-  box-shadow: var(--shadow);
 }
 
 
@@ -785,13 +772,13 @@ strong { font-weight: 500; }
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  aspect-ratio: 3/4;
-  min-height: 320px;
+  aspect-ratio: 2/3;
+  min-height: 520px;
 }
 
 .contact-title {
   font-size: clamp(2.5rem, 4.2vw, 3rem); /* 40–48px */
-  line-height: 1.0;
+  line-height: 1.02;
   margin-bottom: 8px;
 }
 
@@ -801,12 +788,12 @@ strong { font-weight: 500; }
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
 }
 
 .contact-list a {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
   color: var(--fg);
   text-decoration: none;
