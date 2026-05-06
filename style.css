@@ -423,7 +423,7 @@ strong { font-weight: 500; }
 }
 
 .showcase-item {
-  aspect-ratio: 16/10; parent of 73c8ad6 (initial commit: ubah foto sama style)
+  aspect-ratio: 16/10; 
   overflow: hidden;
 }
 
