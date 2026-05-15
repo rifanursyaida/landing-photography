@@ -257,7 +257,7 @@ strong { font-weight: 500; }
 
 /* ── HERO ───────────────────────────────────────────────── */
 .hero {
-  padding: 140px 0 100px;
+  padding: 100px 0 100px;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -266,7 +266,7 @@ strong { font-weight: 500; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -276,7 +276,7 @@ strong { font-weight: 500; }
 
 .hero-img {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 5/4;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -433,12 +433,12 @@ strong { font-weight: 500; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  gap: 30px;
   align-items: start;
 }
 
 .about-portrait-wrap {
-  aspect-ratio: 2/3;
+  aspect-ratio: 3/4;
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
